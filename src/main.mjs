@@ -20,7 +20,7 @@ export default class MainScript {
 
                     if (logou) {
                         await this.waitForElement(By.xpath('/html/body/div[1]/div[2]/div/div'), "Página Inicial" )
-                        console.log(chalk.blue("Deslogando!!!!!!!!!!!!!!!!!!!!"))
+                        console.log(chalk.blue("Deslogando!!!!!"))
                         await this.driver.get(process.env.URL);
                     }
             }
@@ -28,7 +28,8 @@ export default class MainScript {
         } catch (error) {
             console.error(chalk.red("Ocorreu um erro:"), error);
         } finally {
-            await this.driver.quit();
+            console.log(chalk.green("\n","Finalizando o fluxo................."), "\n");
+            // await this.driver.quit();
         }
     }
 
